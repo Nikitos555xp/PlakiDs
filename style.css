@@ -44,7 +44,7 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 20px;
+    /* margin-left: 20px; */
 }
 
 nav ul li a {
@@ -507,6 +507,7 @@ nav ul li a:hover {
 
 
 .tell-about-you{
+    position: relative;
   padding: 50px 0;
    /* background-color: #F5F5F5; */
 }
@@ -577,18 +578,18 @@ nav ul li a:hover {
 }
 
 .tell-about-you button {
+    margin-top: 50px;
     width: 250px;
-    margin-left: 127vh;
-    margin-top: 35px;
     background-color: #191a23;
     color: #fff;
-    border-radius:9px;
+    border-radius: 9px;
     padding: 15px 30px;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    bottom: 0;
-    left: 1000px;
+    position: absolute;
+    bottom: -30px; /* Расстояние от нижнего края */
+    right: 156px; /* Расстояние от правого края */
 }
 
 .tell-about-you button:hover{
@@ -710,27 +711,45 @@ nav ul li a:hover {
     padding: 50px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    width: 100%;
+    margin-bottom: 50px;
+    flex-wrap: wrap; /* позволяет адаптировать элементы на маленьких экранах */
 }
 
+.form-container {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.image-container {
+    width: 100%;
+    max-width: 500px;
+    /* overflow: hidden; */
+}
+
+.form-image {
+    flex-shrink: 0;
+    /* width: 100%; */
+    height: auto;
+    margin-left: 180px;
+    object-position: right; 
+}
 
 .have-question h2 {
     margin-right: 20px;
     font-size: 24px;
     max-width: 500px;
     margin-bottom: 10px;
-    font-weight: 300; /* Тонкий шрифт */
+    font-weight: 300;
 }
 
 .have-question p {
     padding-top: 5px;
     font-size: 16px;
-    line-height: 1.4; /* Меньшая высота строки */
+    line-height: 1.4;
     max-width: 500px;
-    font-weight: 300; /* Тонкий шрифт */
-    margin: 0; /* Убирает отступы */
+    font-weight: 300;
+    margin: 0;
 }
-
 
 .have-question form {
     display: flex;
@@ -738,8 +757,8 @@ nav ul li a:hover {
 }
 
 .radio-group {
-    display: flex; /* Горизонтальное выравнивание */
-    align-items: center; /* Выравнивание по вертикали */
+    display: flex;
+    align-items: center;
     margin-bottom: 20px;
 }
 
@@ -794,7 +813,6 @@ nav ul li a:hover {
 }
 
 .have-question form textarea {
-    border: 1px solid #000000;
     resize: none;
     height: 150px;
 }
@@ -809,40 +827,39 @@ nav ul li a:hover {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    width: 100%; /* Растягиваем кнопку на всю ширину */
+    width: 100%;
 }
 
 .have-question form button:hover {
     background-color: #1a1a1a;
 }
 
-.form-image {
-    padding-left: 620px;
-    width: 100%;
-    max-width: 600px; 
-    height: auto;
-    align-self: center;
-    margin-left: auto;
-}
 
 footer {
-    background-color: #000;
+    background-color: #191a23;
     color: #fff;
     padding: 30px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
+
 
 .footer-content {
     display: flex;
-    justify-content: space-between;
-     align-items: flex-start;
-     margin-bottom: 30px;
+    justify-content: space-between; 
+    align-items: flex-start; 
+    flex-wrap: wrap;
+    gap: 20px;
 }
+
 footer nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 10px;
 }
 
@@ -852,51 +869,79 @@ footer nav ul li a {
     font-size: 16px;
 }
 
+footer nav {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+}
+
 .contacts {
+    background-color: #191a23;
+    padding: 15px;
     line-height: 1.6;
-     display: flex;
-      flex-direction: column;
-      gap: 5px;
+    display: inline-block;
+    gap: 5px;
+    padding-left: 20px;
+    border-radius: 5px;
 }
 
 .contacts a {
     color: #fff;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .newsletter {
-   display: flex;
-   flex-direction: column;
+    background-color: #292a32;
+    border-radius: 19px;
+    padding: 50px 50px;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: row; /* Горизонтальное расположение */
     gap: 10px;
+    text-align: right;
+    align-items: center; /* По центру по вертикали */
 }
 
 .newsletter input {
-    padding: 10px;
-     border-radius: 5px;
-   background-color: #1a1a1a;
-    border: none;
-  color: #fff;
+    border: 1px solid white;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+.newsletter input::placeholder {
+    color: #fff; /* Белый цвет текста placeholder */
 }
 
+
 .newsletter button {
-     background-color: #90EE90;
-     color: #000;
+    background-color: #b9ff66;
+    border-radius: 5px;
+    color: #000;
     border: none;
-     padding: 10px 20px;
-   font-size: 16px;
-  cursor: pointer;
-   transition: background-color 0.3s ease;
+    padding: 20px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
+
+
 .newsletter button:hover {
-     background-color: #75c975;
+    background-color: #75c975;
 }
-.copyright{
-  text-align: center;
-   font-size: 14px;
-}
-.copyright a{
+
+.copyright {
+    padding-left: 17px;
+    padding-top: 40px;
+    text-align: left;
     color: #fff;
-    text-decoration: none;
+    font-size: 14px;
+}
+
+.copyright a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: underline;
+    margin-right: 10px; /* Добавьте отступ, если нужно */
 }
 
 .contact-item {
@@ -905,4 +950,12 @@ footer nav ul li a {
     padding: 10px;
     display: inline-block;
     margin: 10px;
+}
+
+.br {
+    color: #fff;
+    text-decoration: underline;
+}
+.stop{
+    padding-left: 30px;
 }

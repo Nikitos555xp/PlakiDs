@@ -304,8 +304,8 @@
                         <p>Я бы хотела организовать круто танцевальное мероприятие в своем городе !</p>
                     </div>
                 </div>
+                <button>Подробнее</button>
             </div>
-            <button>Подробнее</button>
         </div>
     </section>
     
@@ -371,58 +371,65 @@
     
     
     <section class="have-question">
-       <div class="container">
-            <div class="text_ivent">
-                <h2 class="ivent">Есть вопрос?</h2>
-                <p class="country-text">Свяжись с нашей командой <br>с помощью это формы</p>
-            </div>
+        <div class="container">
             <div class="have-question-content">
-                <form>
-                    <div class="radio-group">
-                        <input type="radio" id="question" name="type" value="question" checked>
-                        <label for="question">Вопрос</label>
-                        <input type="radio" id="suggestion" name="type" value="suggestion">
-                        <label for="suggestion">Предложение</label>
+                <div class="form-container">
+                    <div class="text_ivent">
+                        <h2 class="ivent">Есть вопрос?</h2>
+                        <p class="country-text">Свяжись с нашей командой <br>с помощью этой формы</p>
                     </div>
-                    <p class="none">Имя</p>
-                    <input type="text" id="name" name="name" placeholder="Имя" required>
-                    <p class="none">Электронная почта</p>
-                    <input type="email" id="email" name="email" placeholder="Электронная почта" required>
-                    <p class="none">Сообщение*</p>
-                    <textarea id="message" name="message" placeholder="Сообщение" required></textarea>
-                    <button type="submit">Отправить сообщение</button>
-                </form>
-                <img src="images/imgre.svg" alt="Form Image" class="form-image">
-           </div>
+                    <form>
+                        <div class="radio-group">
+                            <input type="radio" id="question" name="type" value="question" checked>
+                            <label for="question">Вопрос</label>
+                            <input type="radio" id="suggestion" name="type" value="suggestion">
+                            <label for="suggestion">Предложение</label>
+                        </div>
+                        <p class="none">Имя</p>
+                        <input type="text" id="name" name="name" placeholder="Имя" required>
+                        <p class="none">Электронная почта</p>
+                        <input type="email" id="email" name="email" placeholder="Электронная почта" required>
+                        <p class="none">Сообщение*</p>
+                        <textarea id="message" name="message" placeholder="Сообщение" required></textarea>
+                        <button type="submit">Отправить сообщение</button>
+                    </form>
+                </div>
+                <div class="image-container">
+                    <img class="form-image" src="images/imgre.svg" alt="image">
+                </div>
+            </div>
         </div>
-  </section>
+    </section>
+    
 
     <footer>
         <div class="container">
             <div class="footer-content">
-                <nav>
+                <nav class="br">
                     <ul>
                         <li><a href="#">О нас</a></li>
                         <li><a href="#">Партнёры</a></li>
-                         <li><a href="#">Наши кейсы</a></li>
+                        <li><a href="#">Наши кейсы</a></li>
                         <li><a href="#">Блог</a></li>
-                       <li><a href="#">Обучение</a></li>
+                        <li><a href="#">Обучение</a></li>
                     </ul>
-                 </nav>
+                </nav>
                 <div class="contacts">
-                    <p>Контакты</p>
+                    <p class="ivent">Контакты</p>
                     <p>Email: <a href="mailto:info@dokacw.ru">info@dokacw.ru</a></p>
                     <p>Phone: <a href="tel:7-989-717-63-49">7-989-717-63-49</a></p>
                     <p>Address: Шахты, ул. Энтузиастов, д. 85</p>
                 </div>
-                 <div class="newsletter">
-                    <input type="email" placeholder="Электронна почта">
+                <div class="newsletter">
+                    <input type="email" placeholder="Электронная почта">
                     <button>Подписаться на новости</button>
-                 </div>
+                </div>
             </div>
-                <p class="copyright">© 2025 DokaGo! <a href="#">Политика конфиденциальности</a></p>
-           </div>
+            <hr>
+            <p class="copyright">© 2025 DokaGo! <a href="#" class="stop">Политика конфиденциальности</a></p>
+        </div>
     </footer>
+
   <script src="script.js"></script>
 </body>
 
